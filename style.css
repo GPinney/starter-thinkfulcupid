@@ -118,3 +118,53 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  .group {
+    display: flex;
+    flex-direction: row;
+  } 
+  header {
+    /* Changes the default setting from `block` to `flex`. */
+    display: flex;
+    /* Pushes the items (the title and nav) to the far sides of the 
+       browser with space between them. */
+    justify-content: space-between;
+    /* Adds 0 pixels padding top and bottom, and 30 pixels padding 
+       left and right. */
+    padding: 0 30px;
+  }
+  
+    header h1 {
+      /* Sets 14 pixels of margin above and below the `h1` and sets 
+          0 pixels of margin to the left and right. */
+      margin: 14px 0;
+      /* Removes or sets 0 pixels of padding above the `h1`. */
+      padding-top: 0;
+      font-size:48px
+      padding: 0 10%
+    }
+  
+    header nav {
+      /*
+        Pushes the navigation container down by 8 pixels to make it
+        present a little better visually within the space.
+      */
+      margin-top: 8px;
+    }
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      padding-left: 0;
+      list-style: none;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+     .item {
+      flex: 0 50%;
+      height: 100px;
+      margin-bottom: 2%; /* (100-32*3)/2 
+   
