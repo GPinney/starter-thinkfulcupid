@@ -22,6 +22,10 @@ p {
   margin: 0;
 }
 
+input {
+text-align: left
+}
+
 section {
   padding: 20px;
 }
@@ -32,7 +36,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -40,6 +44,10 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+}
+
+.group img {
+  width: 100%;
 }
 
 .item {
@@ -51,6 +59,7 @@ main img {
   flex: 2;
 }
 
+
 /* -------  Navigation ------- */
 
 header {
@@ -59,14 +68,26 @@ header {
   text-align: center;
 }
 
+header nav {
+  /* Changes the display property from its default to `flex`. */
+  display: flex;
+  /* Centers an element defined as `display: flex`. */
+  justify-content: center;
+}
+
 .logo {
   font-family: "Tangerine", cursive;
   font-size: 72px;
   color: #ecdbc9;
 }
+header nav ul {
+  display: flex;
+}
 
 header nav ul li {
   list-style-type: none;
+  display: flex;
+  padding-left: 0;
 }
 
 header nav ul li a {
@@ -116,6 +137,7 @@ footer p {
   text-align: center;
   padding: 20px;
 }
+
 
 /* -------  Media Query ------- */
 @media all and (min-width: 480px) {
