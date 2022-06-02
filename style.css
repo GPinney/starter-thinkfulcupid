@@ -4,6 +4,9 @@ body {
   font-family: "Lato", sans-serif;
   color: #6b1a22;
 }
+h1{
+  text-align:center;
+}
 
 h2 {
   font-size: 26px;
@@ -22,10 +25,6 @@ p {
   margin: 0;
 }
 
-input {
-text-align: left
-}
-
 section {
   padding: 20px;
 }
@@ -40,15 +39,16 @@ main img {
 }
 
 /* ---  Groups & Items --- */
-
+.centered{
+  text-align:center;
+}
 .group {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.group img {
-  width: 100%;
-}
 
 .item {
   flex: 1;
@@ -60,20 +60,16 @@ main img {
 }
 
 
+
 /* -------  Navigation ------- */
 
 header {
   background-color: #83092e;
   padding: 20px 20px 0 20px;
   text-align: center;
+  padding-bottom: 20%;
 }
 
-header nav {
-  /* Changes the display property from its default to `flex`. */
-  display: flex;
-  /* Centers an element defined as `display: flex`. */
-  justify-content: center;
-}
 
 .logo {
   font-family: "Tangerine", cursive;
@@ -82,13 +78,11 @@ header nav {
 }
 header nav ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
 }
 
-header nav ul li {
-  list-style-type: none;
-  display: flex;
-  padding-left: 0;
-}
 
 header nav ul li a {
   color: #ecdbc9;
@@ -105,6 +99,11 @@ header nav ul li a:hover {
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
+}
+
+form div{
+  display:flex;
+  justify-content: space-between;
 }
 
 form label {
@@ -140,53 +139,26 @@ footer p {
 
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
-  .group {
+@media all and (min-width: 680px) { 
+  nav {
     display: flex;
+  }
+ 
+  header {
+    display: flex; 
+    justify-content: space-between;
+    padding: 0px; 
+  }
+  .group {
+    align-items: center;
     flex-direction: row;
   } 
-  header {
-    /* Changes the default setting from `block` to `flex`. */
-    display: flex;
-    /* Pushes the items (the title and nav) to the far sides of the 
-       browser with space between them. */
-    justify-content: space-between;
-    /* Adds 0 pixels padding top and bottom, and 30 pixels padding 
-       left and right. */
-    padding: 0 30px;
+  
+}
+
+@media all and (max-width: 480px) {
+  header nav ul {
+    align-items: center;
   }
-  
-    header h1 {
-      /* Sets 14 pixels of margin above and below the `h1` and sets 
-          0 pixels of margin to the left and right. */
-      margin: 14px 0;
-      /* Removes or sets 0 pixels of padding above the `h1`. */
-      padding-top: 0;
-      font-size:48px
-      padding: 0 10%
-    }
-  
-    header nav {
-      /*
-        Pushes the navigation container down by 8 pixels to make it
-        present a little better visually within the space.
-      */
-      margin-top: 8px;
-    }
-    header nav ul {
-      display: flex;
-      flex-direction: row;
-      padding-left: 0;
-      list-style: none;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-     .item {
-      flex: 0 50%;
-      height: 100px;
-      margin-bottom: 2%; /* (100-32*3)/2 
-   
+
+}
